@@ -1,6 +1,8 @@
-import { motion } from "framer-motion";
-import { ArrowRight, Calendar } from "lucide-react";
-import { Button } from "@/components/ui/button";
+"use client"
+
+import { motion } from "framer-motion"
+import { ArrowRight, Calendar } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 const HeroSection = () => {
   return (
@@ -40,7 +42,7 @@ const HeroSection = () => {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-8"
           >
             <span className="w-2 h-2 rounded-full bg-gold animate-pulse" />
-            <span className="text-sm font-medium tracking-wide">Premium Accommodation in Bangalore</span>
+            <span className="text-sm font-medium tracking-wide">Premium Accommodation in Pune</span>
           </motion.div>
 
           {/* Main Heading */}
@@ -51,8 +53,8 @@ const HeroSection = () => {
 
           {/* Subtitle */}
           <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Experience premium living with world-class amenities, modern interiors, and a vibrant community. 
-            Your perfect home away from home awaits.
+            Experience premium living with world-class amenities, modern interiors, and a vibrant community. Your
+            perfect home away from home awaits.
           </p>
 
           {/* CTA Buttons */}
@@ -109,14 +111,14 @@ const HeroSection = () => {
           <div className="w-6 h-10 rounded-full border-2 border-white/30 flex items-start justify-center p-2">
             <motion.div
               animate={{ y: [0, 8, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity }}
+              transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY }}
               className="w-1.5 h-1.5 rounded-full bg-gold"
             />
           </div>
         </motion.div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default HeroSection;
+export default HeroSection
