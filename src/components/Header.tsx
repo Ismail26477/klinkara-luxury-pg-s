@@ -1,19 +1,21 @@
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Phone, Menu, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
+"use client"
+
+import { useState, useEffect } from "react"
+import { motion, AnimatePresence } from "framer-motion"
+import { Phone, Menu, X } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 const Header = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+      setIsScrolled(window.scrollY > 50)
+    }
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
   const navLinks = [
     { name: "Home", href: "#home" },
@@ -21,7 +23,7 @@ const Header = () => {
     { name: "Rooms", href: "#rooms" },
     { name: "Gallery", href: "#gallery" },
     { name: "Contact", href: "#contact" },
-  ];
+  ]
 
   return (
     <>
@@ -31,7 +33,7 @@ const Header = () => {
           <Phone className="w-4 h-4" />
           <span>Call us now: +91 98765 43210</span>
           <span className="mx-4">|</span>
-          <span>📍 Prime Location, Bangalore</span>
+          <span>📍 Prime Location, Pune</span>
         </div>
       </div>
 
@@ -80,10 +82,7 @@ const Header = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 text-foreground"
-          >
+          <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="lg:hidden p-2 text-foreground">
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
@@ -121,7 +120,7 @@ const Header = () => {
         </AnimatePresence>
       </motion.header>
     </>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
