@@ -1,8 +1,10 @@
-import { motion } from "framer-motion";
-import { MapPin, Phone, Mail, Facebook, Instagram, Twitter, Linkedin, Youtube } from "lucide-react";
+"use client"
+
+import { motion } from "framer-motion"
+import { MapPin, Phone, Mail, Facebook, Instagram, Twitter, Linkedin, Youtube } from "lucide-react"
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear()
 
   const footerLinks = {
     quickLinks: [
@@ -19,7 +21,7 @@ const Footer = () => {
       { name: "Book a Visit", href: "#site-visit" },
       { name: "Book Now", href: "#booking" },
     ],
-  };
+  }
 
   const socialLinks = [
     { icon: Facebook, href: "#", label: "Facebook" },
@@ -27,7 +29,7 @@ const Footer = () => {
     { icon: Twitter, href: "#", label: "Twitter" },
     { icon: Linkedin, href: "#", label: "LinkedIn" },
     { icon: Youtube, href: "#", label: "YouTube" },
-  ];
+  ]
 
   return (
     <footer className="bg-primary text-white">
@@ -35,11 +37,7 @@ const Footer = () => {
       <div className="container-luxury py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 rounded-full bg-gradient-to-br from-gold to-gold-light flex items-center justify-center">
                 <span className="font-display text-xl font-bold text-primary">K</span>
@@ -50,8 +48,8 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-white/70 leading-relaxed mb-6">
-              Experience premium living at Klinkara Luxury PG. Where comfort meets class, 
-              and convenience becomes a lifestyle.
+              Experience premium living at Klinkara Luxury PG. Where comfort meets class, and convenience becomes a
+              lifestyle.
             </p>
             {/* Social Links */}
             <div className="flex gap-3">
@@ -79,10 +77,7 @@ const Footer = () => {
             <ul className="space-y-3">
               {footerLinks.quickLinks.map((link) => (
                 <li key={link.name}>
-                  <a
-                    href={link.href}
-                    className="text-white/70 hover:text-gold transition-colors duration-300"
-                  >
+                  <a href={link.href} className="text-white/70 hover:text-gold transition-colors duration-300">
                     {link.name}
                   </a>
                 </li>
@@ -101,10 +96,7 @@ const Footer = () => {
             <ul className="space-y-3">
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
-                  <a
-                    href={link.href}
-                    className="text-white/70 hover:text-gold transition-colors duration-300"
-                  >
+                  <a href={link.href} className="text-white/70 hover:text-gold transition-colors duration-300">
                     {link.name}
                   </a>
                 </li>
@@ -124,8 +116,9 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
                 <span className="text-white/70">
-                  123 Premium Avenue, Koramangala<br />
-                  Bangalore, Karnataka 560034
+                  456 Prestige Tower, Kalyani Nagar
+                  <br />
+                  Pune, Maharashtra 411006
                 </span>
               </li>
               <li className="flex items-center gap-3">
@@ -141,7 +134,7 @@ const Footer = () => {
             {/* Small Map */}
             <div className="mt-6 rounded-xl overflow-hidden h-32">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.5965898744387!2d77.61474811482188!3d12.935218990879193!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1452c2aacbc1%3A0xce8cf4fa25ab9e2a!2sKoramangala%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1234567890"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.5965898744387!2d73.86474811482188!3d18.535218990879193!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c3e4c3e4c3e5%3A0xc3e4c3e4c3e4c3e4!2sKalyani%20Nagar%2C%20Pune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1234567890"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -172,7 +165,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer
