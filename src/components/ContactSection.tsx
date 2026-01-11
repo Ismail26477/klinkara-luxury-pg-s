@@ -1,5 +1,7 @@
-import { motion } from "framer-motion";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+"use client"
+
+import { motion } from "framer-motion"
+import { MapPin, Phone, Mail, Clock } from "lucide-react"
 
 const ContactSection = () => {
   return (
@@ -16,9 +18,7 @@ const ContactSection = () => {
           <span className="inline-block text-accent font-semibold text-sm tracking-widest uppercase mb-4">
             Get In Touch
           </span>
-          <h2 className="heading-luxury text-foreground mb-4">
-            Contact Us
-          </h2>
+          <h2 className="heading-luxury text-foreground mb-4">Contact Us</h2>
           <div className="gold-divider mb-6" />
           <p className="subheading-luxury mx-auto">
             Have questions? Reach out to us anytime. We're here to help you find your perfect home.
@@ -38,7 +38,7 @@ const ContactSection = () => {
               {
                 icon: MapPin,
                 title: "Our Location",
-                content: "123 Premium Avenue, Koramangala\nBangalore, Karnataka 560034",
+                content: "456 Prestige Tower, Kalyani Nagar\nPune, Maharashtra 411006",
               },
               {
                 icon: Phone,
@@ -68,12 +68,8 @@ const ContactSection = () => {
                   <item.icon className="w-6 h-6 text-accent" />
                 </div>
                 <div>
-                  <h4 className="font-display text-lg font-semibold text-foreground mb-1">
-                    {item.title}
-                  </h4>
-                  <p className="text-muted-foreground whitespace-pre-line leading-relaxed">
-                    {item.content}
-                  </p>
+                  <h4 className="font-display text-lg font-semibold text-foreground mb-1">{item.title}</h4>
+                  <p className="text-muted-foreground whitespace-pre-line leading-relaxed">{item.content}</p>
                 </div>
               </motion.div>
             ))}
@@ -88,7 +84,7 @@ const ContactSection = () => {
             className="luxury-card overflow-hidden"
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.5965898744387!2d77.61474811482188!3d12.935218990879193!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1452c2aacbc1%3A0xce8cf4fa25ab9e2a!2sKoramangala%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1234567890"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.5965898744387!2d73.86474811482188!3d18.535218990879193!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c3e4c3e4c3e5%3A0xc3e4c3e4c3e4c3e4!2sKalyani%20Nagar%2C%20Pune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1234567890"
               width="100%"
               height="100%"
               style={{ border: 0, minHeight: "400px" }}
@@ -101,7 +97,7 @@ const ContactSection = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default ContactSection;
+export default ContactSection
